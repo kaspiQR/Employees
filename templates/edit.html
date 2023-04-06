@@ -3,7 +3,7 @@
 {%block content%}
 <div class="col-md-12">
     <h4>Django Crud</h4>
-    <form method="POST" class="post-form" action="/update/{{employee.id}}">
+    <form method="POST" class="post-form" enctype="multipart/form-data" action="/update/{{employee.id}}">
         {% csrf_token%}
         <div class="container">
             <br>
