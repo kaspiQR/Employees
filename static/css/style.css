@@ -15,18 +15,19 @@ header {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* заменим justify-content: flex-end; на justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 60px;
 }
 
+
 header nav ul li:nth-child(1) {
-    margin-right: auto; /* добавим автомаргин справа для первого элемента, чтобы он располагался по левому краю */
+    margin-right: auto;
 }
 
 header nav ul li a {
@@ -34,12 +35,9 @@ header nav ul li a {
     color: white;
     font-size: 18px;
 }
-header nav ul li a.home {
+header nav ul li.home {
     font-size: 24px;
 }
-
-
-
 
 
 
@@ -134,4 +132,17 @@ h1 {
 }
 .employee-info div {
     margin-left: 30px;
+}
+
+
+/* Error message */
+div.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    margin: 10px 0;
+    padding: 10px;
+}
+div.error-message li {
+    margin: 5px 0;
 }

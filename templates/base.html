@@ -22,16 +22,26 @@
 <header>
     <nav>
         <ul>
-            <li><a href="/" class="home">Home</a></li>
-            <li><a href="/login/" class="right-links">Login</a></li>
-            <li><a href="/register/" class="right-links">Register</a></li>
+            <li class="home"><a href="/">Home</a></li>
+
+            {% if user.is_authenticated %}
+            <li class="">hello, {{user.username}}
+                <br/>
+                <a href="{% url 'logout' %}">Logout</a>
+
+            </li>
+
+            {% else %}
+            <li class="right-links"><a href="{% url 'login' %}">Login</a></li>
+            <li class="right-links"><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
         </ul>
     </nav>
 </header>
 
 <div class="container">
-        {%block content%}
-        {%endblock%}
+    {%block content%}
+    {%endblock%}
 </div>
 <script>
 $(document).ready(function() {
@@ -41,6 +51,10 @@ $(document).ready(function() {
        }
     );
 } );
+
+
+
+
 
 </script>
 </body>
