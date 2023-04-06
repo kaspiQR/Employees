@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>{{ employee.name }}</h1>
+  <h1>{{ employee.email }}</h1>
+  <h1>{{ employee.phone }}</h1>
+    {% if employee.image %}
+    <img src="{{ employee.image.url }}">
+    {% else %}
+    <img src="#">
+    {% endif %}
+</body>
+</html>

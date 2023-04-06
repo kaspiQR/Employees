@@ -6,7 +6,7 @@
 <div class="col-md-12">
     <h4>Django CRUD (Create Read Update Delete) Example - Bootstrap Datatable GRID</h4>
 
-    <form method="POST" class="post-form" action="/addnew">
+    <form method="POST" class="post-form" action="{% url 'addnew' %}">
         {% csrf_token %}
         <div class="container">
             <br>
