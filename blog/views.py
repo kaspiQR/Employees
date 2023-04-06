@@ -7,8 +7,8 @@ def add_new(request):
     if request.method == 'POST':
         form = EmployeeForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('/')
+            instance = form.save()
+            return redirect(f'/detail/{instance.id}')
 
     else:
         form = EmployeeForm()

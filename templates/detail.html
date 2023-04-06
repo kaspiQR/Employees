@@ -4,31 +4,34 @@
 {%block content%}
 
 <h1>О сотруднике</h1>
-<div class="employee-info">
-    {% if employee.image %}
-    <img src="{{ employee.image.url }}">
-    {% else %}
-    <img src="#">
-    {% endif %}
-    <div>
-        <p><strong>Имя:</strong> {{ employee.name }}</p>
-        <p><strong>Email:</strong> {{ employee.email }}</p>
-        <p><strong>Телефон:</strong> {{ employee.phone }}</p>
+<div class="container_info">
 
-        <a href="{% url 'edit'  employee.id  %}"
-           class="btn btn-primary btn-xs"
-           data-title="Edit" data-toggle="modal"
-           data-target="#edit">
-            <span class="glyphicon glyphicon-pencil"></span>
-        </a>
-        <a href="{% url 'delete'  employee.id  %}"
-           class="btn btn-danger btn-xs"
-           data-title="Delete"
-           data-toggle="modal"
-           data-target="#delete">
-            <span class="glyphicon glyphicon-trash"></span>
-        </a>
+    <div class="employee-info">
+        {% if employee.image %}
+        <img src="{{ employee.image.url }}">
+        {% else %}
+        <img src="#">
+        {% endif %}
+        <div>
+            <p><strong>Имя:</strong> {{ employee.name }}</p>
+            <p><strong>Email:</strong> {{ employee.email }}</p>
+            <p><strong>Телефон:</strong> {{ employee.phone }}</p>
 
+            <a href="{% url 'edit'  employee.id  %}"
+               class="btn btn-primary btn-xs"
+               data-title="Edit" data-toggle="modal"
+               data-target="#edit">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+            <a href="{% url 'delete'  employee.id  %}"
+               class="btn btn-danger btn-xs"
+               data-title="Delete"
+               data-toggle="modal"
+               data-target="#delete">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+
+        </div>
     </div>
 </div>
 {%endblock%}
