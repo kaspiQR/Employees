@@ -25,8 +25,8 @@
             {%for employee in employees%}
             <tr>
                 <td><input type="checkbox" class="checkthis"/></td>
-                <td><a href="{{ employee.get_absolute_url }}">{{ employee.id}}</a> </td>
-                <td><a href="{{ employee.get_absolute_url }}">{{ employee.name}}</a> </td>
+                <td><a class="a-link" href="{{ employee.get_absolute_url }}">{{ employee.id}}</a> </td>
+                <td><a class="a-link" href="{{ employee.get_absolute_url }}">{{ employee.name}}</a> </td>
                 <td>{{ employee.email}}</td>
                 <td>{{ employee.phone}}</td>
                 {% if employee.image %}

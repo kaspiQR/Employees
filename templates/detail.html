@@ -1,39 +1,34 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Личный кабинет</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% extends "base.html" %}
 
-<div class="container">
-    <h1>О сотруднике</h1>
-    <div class="employee-info">
-        {% if employee.image %}
-        <img src="{{ employee.image.url }}">
-        {% else %}
-        <img src="#">
-        {% endif %}
-        <div>
-            <p><strong>Имя:</strong> {{ employee.name }}</p>
-            <p><strong>Email:</strong> {{ employee.email }}</p>
-            <p><strong>Телефон:</strong> {{ employee.phone }}</p>
-            <a href="{% url 'edit'  employee.id  %}">
-                <button class="edit-btn">
-                    <i class="fas fa-pencil-alt btn-icon"></i>
-                    <span class="btn-text">Edit</span>
-                </button>
-            </a>
-             <a href="{% url 'delete'  employee.id  %}">
-                <button class="delete-btn">
-                    <i class="fas fa-pencil-alt btn-icon"></i>
-                    <span class="btn-text">Delete</span>
-                </button>
-             </a>
-        </div>
+
+{%block content%}
+
+<h1>О сотруднике</h1>
+<div class="employee-info">
+    {% if employee.image %}
+    <img src="{{ employee.image.url }}">
+    {% else %}
+    <img src="#">
+    {% endif %}
+    <div>
+        <p><strong>Имя:</strong> {{ employee.name }}</p>
+        <p><strong>Email:</strong> {{ employee.email }}</p>
+        <p><strong>Телефон:</strong> {{ employee.phone }}</p>
+
+        <a href="{% url 'edit'  employee.id  %}"
+           class="btn btn-primary btn-xs"
+           data-title="Edit" data-toggle="modal"
+           data-target="#edit">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+        <a href="{% url 'delete'  employee.id  %}"
+           class="btn btn-danger btn-xs"
+           data-title="Delete"
+           data-toggle="modal"
+           data-target="#delete">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>
+
     </div>
 </div>
-</body>
-</html>
+{%endblock%}
