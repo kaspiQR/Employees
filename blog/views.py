@@ -30,7 +30,7 @@ def update(request, id):
     form = EmployeeForm(request.POST, request.FILES, instance=employee)
     if form.is_valid():
         form.save()
-        return redirect('/')
+        return redirect(f'/detail/{id}')
     return render(request, 'update.html', {'employee': employee})
 
 

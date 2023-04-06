@@ -14,13 +14,24 @@
 
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="/" class="home">Home</a></li>
+            <li><a href="/login/" class="right-links">Login</a></li>
+            <li><a href="/register/" class="right-links">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
 <div class="container">
-    <div class="row">
         {%block content%}
         {%endblock%}
-    </div>
 </div>
 <script>
 $(document).ready(function() {

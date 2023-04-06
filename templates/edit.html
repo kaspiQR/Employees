@@ -44,6 +44,13 @@
             <div class="forum-group row">
                 <label class="col-sm-2 col-form-label">Employee Image: </label>
                 <div class="col-sm-4">
+
+                    <span>
+                        Текущий момент стоит:
+                        <a href="{{ employee.image.url }}">
+                            {{ employee.image }}
+                        </a>
+                    </span>
                     <input type="file" class="form-control" name="image" id="image"
                            value="{{ employee.image }}"/>
                 </div>

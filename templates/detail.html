@@ -1,17 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <h1>{{ employee.name }}</h1>
-  <h1>{{ employee.email }}</h1>
-  <h1>{{ employee.phone }}</h1>
-    {% if employee.image %}
-    <img src="{{employee.image.url}}">
-    {% else %}
-    <img src="#">
-    {% endif %}
+
+<div class="container">
+    <h1>О сотруднике</h1>
+    <div class="employee-info">
+        {% if employee.image %}
+        <img src="{{ employee.image.url }}">
+        {% else %}
+        <img src="#">
+        {% endif %}
+        <div>
+            <p><strong>Имя:</strong> {{ employee.name }}</p>
+            <p><strong>Email:</strong> {{ employee.email }}</p>
+            <p><strong>Телефон:</strong> {{ employee.phone }}</p>
+            <a href="{% url 'edit'  employee.id  %}">
+                <button class="edit-btn">
+                    <i class="fas fa-pencil-alt btn-icon"></i>
+                    <span class="btn-text">Edit</span>
+                </button>
+            </a>
+             <a href="{% url 'delete'  employee.id  %}">
+                <button class="delete-btn">
+                    <i class="fas fa-pencil-alt btn-icon"></i>
+                    <span class="btn-text">Delete</span>
+                </button>
+             </a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

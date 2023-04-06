@@ -1,0 +1,102 @@
+ body {
+  margin-top: 70px;
+}
+
+/* Заголовок */
+header {
+  background-color: green;
+  color: #fff;
+  padding: 30px;
+  position: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 30px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px; /* отступы внутри кнопок */
+  border-radius: 5px; /* закругление углов кнопок */
+}
+
+a:hover {
+  background-color: #fff;
+  color: #0077c2;
+}
+
+.home {
+  margin-right: auto;
+}
+
+.right-links {
+  margin-left: auto;
+}
+
+
+/* Кнопки */
+.edit-btn {
+    background-color: #0077c2;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.btn-icon {
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.btn-text {
+    vertical-align: middle;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.employee-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.employee-info img {
+    width: 300px;
+    height: 300px;
+    margin-right: 30px;
+}
+.employee-info div {
+    margin-left: 30px;
+}
+
+
+
+
+.table-responsive a {
+    color: #763489;
+    text-decoration: none;
+}
