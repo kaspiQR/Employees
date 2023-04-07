@@ -135,3 +135,15 @@ h1 {
 .employee-info div {
     margin-left: 30px;
 }
+
+/* Error message */
+div.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    margin: 10px 0;
+    padding: 10px;
+}
+div.error-message li {
+    margin: 5px 0;
+}
