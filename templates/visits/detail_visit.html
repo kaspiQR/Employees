@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{%block content%}
+
+<h1>О Посещении </h1>
+<div class="container_info">
+
+    <div class="employee-info">
+
+        <div>
+            <p><strong>Имя:</strong> {{ visit.employee }}</p>
+            <p><strong>Date:</strong> {{ visit.date }}</p>
+            <p><strong>Visited:</strong> {{ visit.visited }}</p>
+            <p><strong>Visited:</strong> {{ visit.visited }}</p>
+            <p><strong>Visited:</strong> {{ visit.visited }}</p>
+            <p><strong>Visited:</strong> {{ visit.visited }}</p>
+
+
+            <a href="#"
+               class="btn btn-primary btn-xs"
+               data-title="Edit" data-toggle="modal"
+               data-target="#edit">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+            <a href="#"
+               class="btn btn-danger btn-xs"
+               data-title="Delete"
+               data-toggle="modal"
+               data-target="#delete">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+
+        </div>
+    </div>
+</div>
+{%endblock%}

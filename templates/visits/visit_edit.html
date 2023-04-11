@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{%block title%}Add New Employee{%endblock title%}
+{%block content%}
+<div class="col-md-12">
+    <h4>Django Crud</h4>
+    <form method="POST" class="post-form" enctype="multipart/form-data" action="{% url 'edit_visit' visit.id %}">
+        {% csrf_token%}
+        <div class="container">
+            <br>
+            <div class="forum-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <h3>Update Details</h3>
+                </div>
+            </div>
+            <div class="forum-group row">
+                <div class="col-sm-4">
+                    {{ form.as_p }}
+                </div>
+            </div>
+            <div class="forum-group row">
+                <label class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-success btn-lg">Update</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{%endblock content%}

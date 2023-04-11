@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from visits.models import Visit
 from .forms import EmployeeForm
 from .models import Employee
 
@@ -42,4 +44,11 @@ def destroy(request, id):
 
 def detail(request, id):
     employee = Employee.objects.get(id=id)
-    return render(request, 'detail.html', {'employee': employee})
+    visits = Visit.objects.filter(employee=employee)
+    count_visits = visits.count()
+    context = {
+        'employee': employee,
+        'visits': visits,
+        'count_visits': count_visits
+    }
+    return render(request, 'detail.html', context=context)
